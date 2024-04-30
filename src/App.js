@@ -1,7 +1,7 @@
 import 'bulma/css/bulma.min.css';
 import React from 'react';
 import Weather from './components/weather';
-import './styling.css'; // Adjust the path as necessary
+import './styling.css'; 
 import './App.css';
 
 function App() {

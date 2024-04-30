@@ -31,7 +31,7 @@ const iconMap = {
     "Light rain shower": "293.png",
     "Moderate or heavy rain shower": "296.png",
     "Torrential rain shower": "299.png",
-    // Add more based on your actual CSV data
+    
 };
 
 

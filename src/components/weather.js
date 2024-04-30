@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import iconMap from '../iconMapping'; // Ensure this path is correct based on your project structure
+import iconMap from '../iconMapping';
 
 const Weather = () => {
     const [city, setCity] = useState('');

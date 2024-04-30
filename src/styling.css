@@ -1,13 +1,13 @@
-/* CustomStyles.css */
+
 .input-transition {
-    transition: max-width 0.5s ease-out, padding 0.5s ease-out; /* Adjust transitions for smooth resizing */
-    max-width: 100%; /* Set a reasonable max width for fully expanded input */
-    width: 100%; /* Use full width by default */
+    transition: max-width 0.5s ease-out, padding 0.5s ease-out; 
+    max-width: 100%;
+    width: 100%; 
 }
 
 .icon-transition {
     opacity: 0;
-    transition: opacity 0.5s ease-out; /* Smooth opacity transition */
+    transition: opacity 0.5s ease-out; 
 }
 
 .is-valid .icon-transition {
