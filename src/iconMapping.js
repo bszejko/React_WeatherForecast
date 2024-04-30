@@ -1,0 +1,38 @@
+const iconMap = {
+    "Sunny": "113.png",
+    "Clear": "113.png",
+    "Partly cloudy": "116.png",
+    "Partly Cloudy": "116.png",
+    "Cloudy": "119.png",
+    "Overcast": "122.png",
+    "Mist": "143.png",
+    "Light rain": "176.png",
+    "Moderate rain": "302.png",
+    "Heavy rain": "308.png",
+    "Thunderstorm": "389.png",
+    "Snow": "227.png",
+    "Light snow": "179.png",
+    "Fog": "248.png",
+    "Freezing fog": "260.png",
+    "Patchy rain possible": "176.png",
+    "Patchy rain nearby": "176.png",
+    "Patchy snow possible": "179.png",
+    "Patchy sleet possible": "182.png",
+    "Patchy freezing drizzle possible": "185.png",
+    "Thundery outbreaks possible": "200.png",
+    "Blowing snow": "227.png",
+    "Blizzard": "230.png",
+    "Freezing drizzle": "281.png",
+    "Heavy snow": "338.png",
+    "Ice pellets": "350.png",
+    "Light drizzle": "353.png",
+    "Freezing rain": "362.png",
+    "Heavy freezing drizzle": "365.png",
+    "Light rain shower": "293.png",
+    "Moderate or heavy rain shower": "296.png",
+    "Torrential rain shower": "299.png",
+    // Add more based on your actual CSV data
+};
+
+
+export default iconMap;
