@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import iconMap from '../iconMapping';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+import SwiperCore from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+SwiperCore.use([Pagination, Navigation]);
 
 const Weather = () => {
     const [city, setCity] = useState('');
@@ -19,7 +27,7 @@ const Weather = () => {
         if (!city) return;
         try {
             const apiKey = '841f7ebcf6054841963170701243004';
-            const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3`);
+            const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=6`);
             setWeather(response.data);
             setIsValidCity(true);
         } catch (error) {
@@ -86,27 +94,27 @@ const Weather = () => {
                         </div>
                     </div>
 
-                    <h2>Forecast</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', justifyContent: 'center' }}>
-
-                    {weather.forecast.forecastday.map((day, index) => (
-    <div key={index} className="card" style={{ width: '150px', height: '180px' }}>
-        <div className="card-content">
-            <h3 style={{fontWeight: 'bold'}}>{day.date}</h3>
-            <div style={{ display: 'flex', justifyContent: 'center',marginTop:'10px' }}>
-                <img
-                    src={getIconPath(day.day.condition.text, true)}
-                    alt={day.day.condition.text}
-                    style={{ width: '50px', height: '50px' }}
-                />
-            </div>
-            <p>Max: {day.day.maxtemp_c}°C</p>
-            <p>Min: {day.day.mintemp_c}°C</p>
-        </div>
-    </div>
-))}
-
-                    </div>
+                    <h2 style={{marginBottom:'20px'}}>Forecast</h2>
+                    <Swiper slidesPerView={3} spaceBetween={20} loop={true} navigation={true} className="mySwiper">
+                        {weather.forecast.forecastday.map((day, index) => (
+                            <SwiperSlide key={index}>
+                                
+                                   
+                                        <h3 style={{fontWeight: 'bold'}}>{day.date}</h3>
+                                        <div style={{ display: 'flex', justifyContent: 'center',marginTop:'10px' }}>
+                                            <img
+                                                src={getIconPath(day.day.condition.text, true)}
+                                                alt={day.day.condition.text}
+                                                style={{ width: '50px', height: '50px' }}
+                                            />
+                                        </div>
+                                        <p>Max: {day.day.maxtemp_c}°C</p>
+                                        <p>Min: {day.day.mintemp_c}°C</p>
+                                    
+                              
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             )}
 
