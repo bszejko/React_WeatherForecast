@@ -34,10 +34,13 @@ const Weather = () => {
   };
 
   const getIconPath = (condition, isDay) => {
-    const filename = iconMap[condition] || 'default.png';
+    const normalizedCondition = condition.toLowerCase().trim(); // Ensure normalization and trimming
+    const filename = iconMap[normalizedCondition] || 'default.png'; // Fallback to default if not found
     const folder = isDay ? 'day' : 'night';
     return `/icons/${folder}/${filename}`;
-  };
+};
+
+  
 
   return (
     <div>
