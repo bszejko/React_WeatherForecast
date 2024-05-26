@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-https://github.com/bszejko/React_WeatherForecast/assets/128135634/2c092755-af3d-4900-af1a-d2180f59e98b
+[https://github.com/bszejko/React_WeatherForecast/assets/128135634/2c092755-af3d-4900-af1a-d2180f59e98b](https://github.com/bszejko/React_WeatherForecast/issues/2#issue-2317933906)
 
 Bianka Szejko
 
