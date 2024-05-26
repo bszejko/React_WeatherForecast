@@ -1,7 +1,7 @@
 // CurrentWeather.js
 import React from 'react';
 
-const CurrentWeather = ({ weather, getIconPath, convertTemperature, unit }) => (
+const CurrentWeather = ({ weather, getIconPath }) => (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ marginRight: '20px' }}>
             <img
@@ -12,7 +12,7 @@ const CurrentWeather = ({ weather, getIconPath, convertTemperature, unit }) => (
         </div>
         <div style={{ display: 'flex' }}>
             <div style={{ marginRight: '20px' }}>
-                <p style={{ margin: '0', fontWeight: 'bold' }}>{convertTemperature(weather.current.temp_c)}°{unit}</p>
+                <p style={{ margin: '0', fontWeight: 'bold' }}>{weather.current.temp_c}°C</p>
                 <p style={{ margin: '0', fontWeight: 'bold' }}>{weather.current.condition.text}</p>
             </div>
             <div>

@@ -89,7 +89,7 @@ const Weather = ({ unit }) => {
             <>
               <CurrentWeather weather={weather} getIconPath={getIconPath} convertTemperature={convertTemperature} unit={unit} />
               <WeatherForecast forecast={weather.forecast} getIconPath={getIconPath} convertTemperature={convertTemperature} unit={unit} />
-              <div className="map-padding"> {/* Add padding here */}
+              <div className="map-padding">
                 <WeatherMap city={city} coordinates={coordinates} />
               </div>
             </>

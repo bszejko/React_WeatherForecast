@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 SwiperCore.use([Pagination, Navigation]);
 
-const WeatherForecast = ({ forecast, getIconPath, convertTemperature, unit }) => (
+const WeatherForecast = ({ forecast, getIconPath }) => (
     <div>
         <h2 style={{ marginBottom: '20px' }}>Forecast</h2>
         <Swiper slidesPerView={3} spaceBetween={20} loop={true} navigation={true} className="mySwiper">
@@ -22,8 +22,8 @@ const WeatherForecast = ({ forecast, getIconPath, convertTemperature, unit }) =>
                             alt={day.day.condition.text}
                             style={{ width: '50px', height: '50px' }}
                         />
-                        <p>Max: {convertTemperature(day.day.maxtemp_c)}°{unit}</p>
-                        <p>Min: {convertTemperature(day.day.mintemp_c)}°{unit}</p>
+                        <p>Max: {day.day.maxtemp_c}°C</p>
+                        <p>Min: {day.day.mintemp_c}°C</p>
                     </div>
                 </SwiperSlide>
             ))}
