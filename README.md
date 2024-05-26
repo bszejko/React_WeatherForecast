@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[https://github.com/bszejko/React_WeatherForecast/assets/128135634/2c092755-af3d-4900-af1a-d2180f59e98b](https://github.com/bszejko/React_WeatherForecast/issues/2#issue-2317933906)
+https://github.com/bszejko/React_WeatherForecast/assets/129495851/8551caa9-2c31-4d62-8d67-cd11f0001aa7
 
 Bianka Szejko
 
@@ -9,6 +9,10 @@ Aleksandra Pstrong
 S22-31 
 
 Projekt Zaliczeniowy
+
+
+
+
 
 
 
