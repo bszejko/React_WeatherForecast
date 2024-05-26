@@ -8,7 +8,8 @@ import WeatherForecast from './weatherForecast';
 import Favorites from './favorites';
 import WeatherMap from './WeatherMap';
 import '../Weather.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Weather = ({ unit }) => {
   const [city, setCity] = useState('');
@@ -77,27 +78,32 @@ const Weather = ({ unit }) => {
   };
 
   return (
-      <div className="weather-container deep-gray-text" >
-        <WeatherInput
-            city={city}
-            isValidCity={isValidCity}
-            handleInputChange={handleInputChange}
-            fetchWeather={fetchWeather}
-        />
-        <button className="button is-info" onClick={addFavorite} disabled={!isValidCity}>Add to Favorites</button>
-        {weather ? (
-            <>
-              <CurrentWeather weather={weather} getIconPath={getIconPath} convertTemperature={convertTemperature} unit={unit} />
-              <WeatherForecast forecast={weather.forecast} getIconPath={getIconPath} convertTemperature={convertTemperature} unit={unit} />
-              <div className="map-padding">
-                <WeatherMap city={city} coordinates={coordinates} />
-              </div>
-            </>
-        ) : (
-            <p className="notification is-warning">No weather data available. Please search for a city.</p>
-        )}
-        <Favorites favorites={favorites} removeFavorite={removeFavorite} fetchFavoriteWeather={fetchFavoriteWeather} />
-      </div>
+    <div className="weather-container deep-gray-text">
+      <WeatherInput
+        city={city}
+        isValidCity={isValidCity}
+        handleInputChange={handleInputChange}
+        fetchWeather={fetchWeather}
+      />
+      {weather ? (
+        <>
+          <CurrentWeather weather={weather} getIconPath={getIconPath} convertTemperature={convertTemperature} unit={unit} />
+          <WeatherForecast forecast={weather.forecast} getIconPath={getIconPath} convertTemperature={convertTemperature} unit={unit} />
+          <div className="map-padding">
+            <WeatherMap city={city} coordinates={coordinates} />
+          </div>
+        </>
+      ) : (
+        <p className="map-padding">No weather data available. Please search for a city.</p>
+      )}
+      <Favorites
+        favorites={favorites}
+        removeFavorite={removeFavorite}
+        fetchFavoriteWeather={fetchFavoriteWeather}
+        addFavorite={addFavorite}
+        isValidCity={isValidCity}
+      />
+    </div>
   );
 };
 
